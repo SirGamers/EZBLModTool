@@ -1,6 +1,6 @@
 ## BL2, TPS, and BL3 auto mod installer
 yes its a powershell script,
-no its not a virus, you can check the code your self
+no its not a virus, you can check the code yourself
 ### requirements
 [Powershell 5 or over](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.3)
  and ethier [Borderlands 2](https://store.steampowered.com/app/49520/Borderlands_2/), [The Pre-Sequel](https://store.steampowered.com/app/261640/Borderlands_The_PreSequel/), or [Borderlands 3](https://store.steampowered.com/app/397540/Borderlands_3/)
