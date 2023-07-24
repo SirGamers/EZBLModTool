@@ -22,34 +22,60 @@ function Get-DirectoryPath {
         }
     }
 
-    # add \OakGame\Binaries to the path
+    # Append \OakGame\Binaries to the path
     $additionalDirectory = "OakGame\Binaries"
     $selectedPath = Join-Path -Path $userInput -ChildPath $additionalDirectory
 
     return $selectedPath
 }
 
-# Call the function
+# Call the function to get the selected path
 $selectedPath = Get-DirectoryPath
 
-# download and extract bl3dx11injection
-Invoke-WebRequest -uri "https://github.com/FromDarkHell/BL3DX11Injection/releases/download/v1.1.3/D3D11.zip" -OutFile $selectedPath\a.zip
-Expand-Archive $selectedPath\a.zip -DestinationPath $selectedPath\Win64\
+# Define the file URLs
+$bl3Dx11InjectionUrl = "https://github.com/FromDarkHell/BL3DX11Injection/releases/download/v1.1.3/D3D11.zip"
+$openHotfixLoaderUrl = "https://github.com/apple1417/OpenHotfixLoader/releases/download/v1.6/OpenHotfixLoader.zip"
 
-# download and extract openhotfixloader
-Invoke-WebRequest -uri "https://github.com/apple1417/OpenHotfixLoader/releases/download/v1.6/OpenHotfixLoader.zip" -OutFile $selectedPath\b.zip
-Expand-Archive $selectedPath\b.zip -DestinationPath $selectedPath\Win64\Plugins
+# Define the file names to be removed
+$fileNamesToRemove = @("a.zip", "b.zip")
 
-#remove ohl and bl3dx11injection zip files (function #2)
+# Define the file name to be removed from a different directory
+$fileNameToRemove = "LICENSE"
+
+# Function to download and extract files
+function Download-AndExtractFile {
+    param (
+        [string]$url,
+        [string]$destinationPath
+    )
+
+    try {
+        # Download the file
+        $downloadedFile = Join-Path -Path $destinationPath -ChildPath (Split-Path -Leaf $url)
+        Invoke-WebRequest -Uri $url -OutFile $downloadedFile
+
+        # Extract the file
+        Expand-Archive -Path $downloadedFile -DestinationPath $destinationPath -Force
+
+        # Remove the downloaded zip file
+        Remove-Item $downloadedFile -Force
+    } catch {
+        Write-Host "Failed to download or extract file from $url"
+    }
+}
+
+# Download and extract bl3dx11injection
+Download-AndExtractFile -url $bl3Dx11InjectionUrl -destinationPath $selectedPath\Win64
+
+# Download and extract openhotfixloader
+Download-AndExtractFile -url $openHotfixLoaderUrl -destinationPath (Join-Path -Path $selectedPath\Win64 -ChildPath "Plugins")
+
+# Function to remove files in the selected path
 function Remove-FilesInSelectedPath {
     param (
         [string]$selectedPath
     )
 
-    # Define the list of file names to be removed from the selectedPath
-    $fileNamesToRemove = @("a.zip", "b.zip")
-
-    # Loop through the list and remove each file from selectedPath
     foreach ($fileName in $fileNamesToRemove) {
         $filePath = Join-Path -Path $selectedPath -ChildPath $fileName
 
@@ -62,17 +88,13 @@ function Remove-FilesInSelectedPath {
     }
 }
 
-#remove ohl LICENSE file (function #3)
+# Function to remove a file from a different directory within selected path
 function Remove-FileFromDifferentDirectory {
     param (
         [string]$selectedPath
     )
 
-    # Define the file name to be removed from a different directory within selectedPath
-    $fileNameToRemove = "LICENSE"
-
-    # Create the full path to the file
-    $filePath = Join-Path -Path (Join-Path -Path $selectedPath -ChildPath "\Win64\Plugins") -ChildPath $fileNameToRemove
+    $filePath = Join-Path -Path (Join-Path -Path $selectedPath -ChildPath "Win64\Plugins") -ChildPath $fileNameToRemove
 
     if (Test-Path $filePath) {
         Remove-Item $filePath -Force
@@ -82,8 +104,8 @@ function Remove-FileFromDifferentDirectory {
     }
 }
 
-# call function #2
+# Call the function to remove files
 Remove-FilesInSelectedPath -selectedPath $selectedPath
 
-# call function #3
+# Call the function to remove a file from a different directory
 Remove-FileFromDifferentDirectory -selectedPath $selectedPath
