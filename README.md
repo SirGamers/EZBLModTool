@@ -1,4 +1,4 @@
-## bl2, tps, and bl3 auto mod installer
+## BL2, TPS, and BL3 auto mod installer
 yes its a powershell script,
 no its not a virus, you can check the code your self
 ### requirements
