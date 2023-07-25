@@ -4,7 +4,7 @@ import requests
 import zipfile
 
 def get_directory_path():
-    prompt_message = "Enter '2' for Borderlands 2, 'TPS' for Borderlands: The Pre-Sequel, 'AODK' for Assault on Dragon's Keep:"
+    prompt_message = "Enter '2' for Borderlands 2, 'TPS' for Borderlands: The Pre-Sequel, 'AODK' for Assault on Dragon Keep:"
     default_path_bl2 = r"C:\Program Files (x86)\Steam\steamapps\common\Borderlands 2"
     default_path_tps = r"C:\Program Files (x86)\Steam\steamapps\common\BorderlandsPreSequel"
     default_path_aodk = r"C:\Program Files (x86)\Steam\steamapps\common\Pawpaw"
