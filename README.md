@@ -1,4 +1,4 @@
-## BL2, TPS, and BL3 auto mod installer
+## BL2, TPS, and BL3 auto mod installer (NOW IN PYTHON!)
 yes its a powershell script,
 no its not a virus, you can check the code yourself
 ### requirements
