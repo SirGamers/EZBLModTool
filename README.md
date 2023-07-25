@@ -10,4 +10,4 @@ or [Python](https://www.python.org/downloads/) (if using python do pip install r
 ### what it installs
 BL2/TPS: [PythonSDK](https://github.com/bl-sdk/bl2-mod-manager), [Text Mod Loader](https://bl-sdk.github.io/mods/TextModLoader/), and [No Ads](https://bl-sdk.github.io/mods/NoAds/)
 
-BL3: [BL3DX11Injection](https://github.com/FromDarkHell/BL3DX11Injection) and [Open Hotfix Loader](https://github.com/apple1417/OpenHotfixLoader)
+BL3/TTW: [BL3DX11Injection](https://github.com/FromDarkHell/BL3DX11Injection) and [Open Hotfix Loader](https://github.com/apple1417/OpenHotfixLoader)
