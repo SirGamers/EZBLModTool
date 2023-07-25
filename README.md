@@ -1,7 +1,7 @@
 ## BL2, TPS, AoDK, TTW, and BL3 auto mod installer (NOW IN PYTHON!)
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
-yes its a powershell script (and now python),
+yes its powershell scripts (and now python),
 no its not a virus, you can check the code yourself
 ### requirements
 [Powershell 5 or over](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.3)
