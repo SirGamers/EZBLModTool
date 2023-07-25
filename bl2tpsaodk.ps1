@@ -2,7 +2,7 @@ function Get-DirectoryPath {
     param (
         [string]$promptMessage = "Enter '2' for Borderlands 2, 'TPS' for Borderlands: The Pre-Sequel, 'AODK' for Assault on Dragon's Keep:",
         [string]$defaultPathBL2 = "C:\Program Files (x86)\Steam\steamapps\common\Borderlands 2",
-        [string]$defaultPathTPS = "C:\Program Files (x86)\Steam\steamapps\common\Borderlands The Pre-Sequel",
+        [string]$defaultPathTPS = "C:\Program Files (x86)\Steam\steamapps\common\BorderlandsPreSequel",
         [string]$defaultPathAODK = "C:\Program Files (x86)\Steam\steamapps\common\Pawpaw"
     )
 
