@@ -1,4 +1,4 @@
-## BL2AutoMod (NOW IN PYTHON!)
+## EasyBLModTool
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 ### **NOTE**
 **TTW and AoDK support is _NOT_ tested. Use at your own risk**
