@@ -1,4 +1,4 @@
-# Easy Borderlands Modding Tool (EZBLModTool)
+# Easy Borderlands Modding Tool (EZBLMT)
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 ## **IMPORTANT NOTE:**
 **TTW and AoDK support is _NOT_ tested. Use at your own risk**
