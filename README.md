@@ -1,4 +1,5 @@
-# Easy Borderlands Modding Tool (EZBLMT) Now on [NexusMods!](https://www.nexusmods.com/borderlands2/mods/377)
+# Easy Borderlands Modding Tool (EZBLMT)
+## Now on [NexusMods!](https://www.nexusmods.com/borderlands2/mods/377)
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 ## **IMPORTANT NOTE:**
 **TTW and AoDK support is _NOT_ tested. Use at your own risk**
