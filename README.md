@@ -1,9 +1,9 @@
 # Easy Borderlands Modding Tool (EZBLMT)
 ## Now on [NexusMods!](https://www.nexusmods.com/borderlands2/mods/377)
-[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 ## **IMPORTANT NOTE:**
-**TTW and AoDK support and the Python versions are _NOT_ tested. Use at your own risk.
-[CLICK HERE FOR TTW/AODK VERSIONS](https://github.com/SirGamers/EZBLModTool/releases/tag/3)**
+**TTW support and the Python versions are _NOT_ tested. Use at your own risk.
+[CLICK HERE FOR TTW VERSIONS](https://github.com/SirGamers/EZBLModTool/releases/tag/3)**
+This also supports the Epic versions.
 ### About this Tool
 This tool is a series of Python scripts to automatically setup mods for Borderlands 2, Borderlands: The Pre-Sequel, Tiny Tina's Assault on Dragon Keep, Tiny Tina's Wonderlands, and Borderlands 3
 ### Requirements
